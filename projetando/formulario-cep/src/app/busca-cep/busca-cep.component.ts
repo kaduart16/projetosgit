@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CepService } from '../cep.service';
+import { Cep } from '../cep';
 
 @Component({
   selector: 'app-busca-cep',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscaCepComponent implements OnInit {
 
-  constructor() { }
+  cep = new Cep();
+  constructor( private cepService: CepService) { }
 
   ngOnInit() {
   }
